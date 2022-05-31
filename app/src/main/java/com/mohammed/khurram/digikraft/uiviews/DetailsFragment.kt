@@ -68,13 +68,13 @@ class DetailsFragment : Fragment() {
          */
         if (feature?.geometry?.coordinates != null && feature.geometry.coordinates.size == 2) {
 
-            val sydney = LatLng(feature.geometry.coordinates[0], feature.geometry.coordinates[1])
+            val location = LatLng(feature.geometry.coordinates[0], feature.geometry.coordinates[1])
             googleMap.addMarker(
-                MarkerOptions().position(sydney)
+                MarkerOptions().position(location)
                     .title("${feature.properties.label} \n ${feature.properties.bikes}")
                     .icon(BitmapDescriptorFactory.fromBitmap(Utility.createSmallMarker(context)))
             )
-            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(sydney, 9.5f))
+            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(location, 9.5f))
         } else {
             Toast.makeText(context, getString(R.string.cordinate_error), Toast.LENGTH_LONG).show()
         }
