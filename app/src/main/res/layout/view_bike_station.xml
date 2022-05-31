@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.mohammed.khurram.digikraft.models.PropertiesX" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp10"
+        app:cardCornerRadius="@dimen/dp10"
+        android:padding="@dimen/dp5"
+        app:cardElevation="@dimen/dp10">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/txtTitle"
+                style="@style/TextAppearance.Material3.TitleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/textcolor_title"
+                android:textSize="@dimen/text_title_size"
+                android:text="@{item.label}"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/titles" />
+
+            <TextView
+                android:id="@+id/txtDesc1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/txtTitle"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+                android:visibility="gone"
+                tools:text="@string/six100" />
+
+
+            <TextView
+                android:id="@+id/txtDesc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.9"
+                android:text="@string/bike_station"
+                app:layout_constraintStart_toEndOf="@+id/txtDesc1"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+                tools:text="@string/bike_station" />
+
+            <ImageView
+                android:id="@+id/imgBike"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp26"
+                android:layout_marginTop="@dimen/dp24"
+                android:src="@drawable/ic_bike"
+                app:layout_constraintEnd_toStartOf="@+id/imgLock"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtDesc2"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/txtAvailableBike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/available_bike"
+                android:layout_marginTop="@dimen/dp8"
+                app:layout_constraintEnd_toEndOf="@+id/imgBike"
+                app:layout_constraintStart_toStartOf="@+id/imgBike"
+                app:layout_constraintTop_toBottomOf="@+id/imgBike"
+                tools:text="@string/available_bike" />
+
+            <TextView
+                android:id="@+id/txtAvailableBikeCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textColor="@color/green_text"
+                android:textSize="@dimen/big_text"
+                android:textStyle="bold"
+                android:text="@{item.bikes}"
+                app:layout_constraintEnd_toEndOf="@+id/imgBike"
+                app:layout_constraintStart_toStartOf="@+id/imgBike"
+                app:layout_constraintTop_toBottomOf="@+id/txtAvailableBike"
+                tools:text="@string/seven" />
+
+            <ImageView
+                android:id="@+id/imgLock"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp26"
+                android:src="@drawable/ic_lock"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/imgBike"
+                app:layout_constraintTop_toTopOf="@+id/imgBike"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/txtAvailableSpace"
+                android:layout_width="wrap_content"
+                android:text="@string/available_space"
+                android:layout_marginTop="@dimen/dp8"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/imgLock"
+                app:layout_constraintStart_toStartOf="@+id/imgLock"
+                app:layout_constraintTop_toBottomOf="@+id/imgLock"
+                tools:text="@string/available_space" />
+
+            <TextView
+                android:id="@+id/txtAvailableSpaceCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textColor="@color/textcolor_title"
+                android:textSize="@dimen/big_text"
+                android:textStyle="bold"
+                android:text="@{item.bike_racks}"
+                app:layout_constraintEnd_toEndOf="@+id/imgLock"
+                app:layout_constraintStart_toStartOf="@+id/imgLock"
+                app:layout_constraintTop_toBottomOf="@+id/txtAvailableSpace"
+                tools:text="@string/number" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

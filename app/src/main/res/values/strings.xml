@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">DigiKraft</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Station List</string>
+    <string name="second_fragment_label">Station Details</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="data_error">Sorry, Station data not available, try other item.</string>
+    <string name="cordinate_error">Sorry, Coordinates not available, try other item.</string>
+    <string name="internet_error">Please connect internet and try again.</string>
+    <string name="loading_data_message">Loading data.</string>
+    <string name="bike_station">• Bike station</string>
+    <string name="titles">047 Rondo onz</string>
+    <string name="six100">600m</string>
+    <string name="available_bike">Available Bike</string>
+    <string name="seven">7</string>
+    <string name="available_space">Available Space</string>
+    <string name="number">54</string>
+    <string name="empty_list">Empty List</string>
+</resources>
